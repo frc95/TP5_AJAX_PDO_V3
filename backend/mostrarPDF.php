@@ -17,7 +17,7 @@ $mpdf = new \Mpdf\Mpdf(['orientation' => 'P',
 $mpdf->SetProtection(array(), $_SESSION["DNIEmpleado"], $_SESSION["DNIEmpleado"]);
 
 $mpdf->SetHeader('Amarilla Godoy Franco Nahuel||{PAGENO}{nbpg}');
-$mpdf->setFooter('https://tp5-pdo-franco-v2.herokuapp.com/||{PAGENO}');
+$mpdf->setFooter('https://tp5-pdo-franco-v3.herokuapp.com/||{PAGENO}');
 
 $datos="";
 $fabrica= new Fabrica("Grupo UTN");
@@ -52,5 +52,5 @@ $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
 
 $mpdf->WriteHTML($tabla);
 
-$mpdf->Output('mi_pdf.pdf', 'I');
+$mpdf->Output();
 ?>
