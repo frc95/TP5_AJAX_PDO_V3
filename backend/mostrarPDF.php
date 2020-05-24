@@ -56,6 +56,6 @@ $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
 
 $mpdf->WriteHTML($tabla);
 
-$mpdf->Output();
+$mpdf->Output('myfile.pdf', "D");
 
 ?>
