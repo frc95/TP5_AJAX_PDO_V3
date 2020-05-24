@@ -8,13 +8,16 @@ header('content-type:application/pdf');
 
 session_start();
 
+try
+{
+
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'P', 
                         'pagenumPrefix' => 'Página nro. ',
                         'pagenumSuffix' => ' - ',
                         'nbpgPrefix' => ' de ',
                         'nbpgSuffix' => ' páginas']);
 
-$mpdf->debug = true;
+
 
 $mpdf->SetProtection(array(), $_SESSION["DNIEmpleado"], $_SESSION["DNIEmpleado"]);
 
@@ -55,4 +58,9 @@ $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
 $mpdf->WriteHTML($tabla);
 
 $mpdf->Output();
+}
+} catch (\Mpdf\MpdfException $e) { 
+    
+    echo $e->getMessage();
+}
 ?>
