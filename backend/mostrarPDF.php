@@ -14,6 +14,8 @@ $mpdf = new \Mpdf\Mpdf(['orientation' => 'P',
                         'nbpgPrefix' => ' de ',
                         'nbpgSuffix' => ' páginas']);
 
+$mpdf->debug = true;
+
 $mpdf->SetProtection(array(), $_SESSION["DNIEmpleado"], $_SESSION["DNIEmpleado"]);
 
 $mpdf->SetHeader('Amarilla Godoy Franco Nahuel||{PAGENO}{nbpg}');
