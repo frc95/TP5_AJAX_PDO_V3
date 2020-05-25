@@ -4,6 +4,10 @@ require "persona.php";
 require "empleado.php";
 require "fabrica.php";
 
+
+ob_start();
+ob_clean();
+
 header('content-type:application/pdf');
 
 session_start();
