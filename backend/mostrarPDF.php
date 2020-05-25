@@ -5,8 +5,6 @@ require "empleado.php";
 require "fabrica.php";
 
 
-ob_start();
-ob_clean();
 
 header('content-type:application/pdf');
 
@@ -58,9 +56,7 @@ $tabla='<table align="">
 
 $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
 $mpdf->WriteHTML("<br>");
-
 $mpdf->WriteHTML($tabla);
 
 $mpdf->Output('mi_pdf.pdf', 'I');
-
 ?>
