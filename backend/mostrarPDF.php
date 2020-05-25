@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-require "persona.php";
-require "empleado.php";
-require "fabrica.php";
+require_once "persona.php";
+require_once "empleado.php";
+require_once "fabrica.php";
 
 try {
 
