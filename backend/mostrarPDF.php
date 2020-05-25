@@ -4,8 +4,8 @@ require "persona.php";
 require "empleado.php";
 require "fabrica.php";
 
-
-
+ob_start();
+ob_clean();
 header('content-type:application/pdf');
 
 session_start();
@@ -59,4 +59,5 @@ $mpdf->WriteHTML("<br>");
 $mpdf->WriteHTML($tabla);
 
 $mpdf->Output('mi_pdf.pdf', 'I');
+ob_end_flush();
 ?>
