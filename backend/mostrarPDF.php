@@ -7,6 +7,8 @@ require "fabrica.php";
 ob_start();
 ob_clean();
 header('content-type:application/pdf');
+header('Content-Transfer-Encoding: binary');
+header('Accept-Ranges: bytes');
 
 session_start();
 
