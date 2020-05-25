@@ -57,9 +57,10 @@ $tabla='<table align="">
 	    </table>';
 
 $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
+$mpdf->WriteHTML("<br>");
 
 $mpdf->WriteHTML($tabla);
 
-$mpdf->Output('myfile.pdf', "D");
+$mpdf->Output('mi_pdf.pdf', 'I');
 
 ?>
