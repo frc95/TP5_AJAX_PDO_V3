@@ -54,8 +54,8 @@ $tabla='<table align="">
             </tr>'.
             $datos.
             '<tr>
-			    <td colspan="4"><hr></td>
-		    </tr>
+	  	<td colspan="4"><hr></td>
+	     </tr>
 	    </table>';
 
 $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
