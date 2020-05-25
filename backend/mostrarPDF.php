@@ -4,6 +4,8 @@ require "persona.php";
 require "empleado.php";
 require "fabrica.php";
 
+try {
+
 ob_start();
 ob_clean();
 header('content-type:application/pdf');
@@ -62,4 +64,8 @@ $mpdf->WriteHTML($tabla);
 
 $mpdf->Output('mi_pdf.pdf', 'I');
 ob_end_flush();
+} catch (\Mpdf\MpdfException $e) { 
+    
+    echo $e->getMessage();
+}
 ?>
